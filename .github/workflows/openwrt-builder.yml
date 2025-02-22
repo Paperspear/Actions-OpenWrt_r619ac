@@ -118,8 +118,6 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        mkdir openwrt/package/base-files/files/etc/hotplug.d/button
-        [ -e 00-button ] && mv 00-button openwrt/package/base-files/files/etc/hotplug.d/button
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
